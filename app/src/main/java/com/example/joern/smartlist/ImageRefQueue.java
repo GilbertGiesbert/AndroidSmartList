@@ -5,11 +5,14 @@ import android.widget.ImageView;
 import java.util.Stack;
 
 /**
- * Created by joern on 15.06.2016.
+ * Created by joern on 16.06.2016.
  */
-public class ImageQueue {
 
-    private Stack<ImageRef> imageRefs = new Stack<ImageRef>();
+//stores list of images to download
+public class ImageRefQueue {
+
+
+    private Stack<ImageRef> imageRefs = new Stack<>();
 
     //removes all instances of this ImageView
     public void clean(ImageView view) {
@@ -20,7 +23,6 @@ public class ImageQueue {
             else ++i;
         }
     }
-
 
     public Stack<ImageRef> getImageRefs() {
         return imageRefs;

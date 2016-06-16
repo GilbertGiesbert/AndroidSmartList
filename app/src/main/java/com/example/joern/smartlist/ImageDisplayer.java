@@ -14,10 +14,9 @@ public class ImageDisplayer implements Runnable {
     ImageView imageView;
     int defaultDrawableId;
 
-    public ImageDisplayer(Bitmap bitmap, ImageView imageView, int defaultDrawableId) {
-
-        this.bitmap = bitmap;
-        this.imageView = imageView;
+    public ImageDisplayer(Bitmap b, ImageView i, int defaultDrawableId) {
+        bitmap=b;
+        imageView=i;
         this.defaultDrawableId = defaultDrawableId;
     }
 

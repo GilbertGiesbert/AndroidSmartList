@@ -2,6 +2,7 @@ package com.example.joern.smartlist;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -19,9 +20,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        ArrayList<ListItem> items = new ListItemFactory().buildListItems(10);
+        ArrayList<ImageItem> items = new ImageItemFactory().buildItems(50);
+        ImageItemAdapter adapter = new ImageItemAdapter(this, R.layout.simple_list_item, items);
 
+        ListView lv = (ListView) findViewById(R.id.lv_list);
 
+        if(lv != null)
+            lv.setAdapter(adapter);
 
 
     }

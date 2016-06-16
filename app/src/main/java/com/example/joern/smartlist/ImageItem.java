@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 /**
  * Created by joern on 15.06.2016.
  */
-public class ListItem {
+public class ImageItem {
 
     private String text;
     private String imageUrl;
